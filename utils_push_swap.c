@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:12:44 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/06 22:07:09 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/07 00:43:06 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (*str != '\0')
-	{
-		str++;
+	while (str[i])
 		i++;
-	}
-	return (i);
+    return (i);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

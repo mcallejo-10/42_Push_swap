@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:16:14 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/06 22:41:48 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/06 23:54:44 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,33 @@ int check_duplicate(int argc, char **argv)
     return (0);
 }
 
+int check_min_or_max(int argc, char **argv)
+{
+    int j;
+    int i;
+
+    j = 1;
+    while(j < argc)
+    {
+        i = 0;
+        while(argv[j][i] == '-' || argv[j][i] == '0')
+            i++;
+          
+        if(ft_strlen(&argv[j][i]) > 10)
+            return (1);
+        else if(ft_strlen(&argv[j][i]) < 10)
+            j++;                
+        else if(argv[j][0] == '-')
+        {
+            if(ft_strncmp(argv[j], "-2147483648", 11) > 0)
+                return (1);
+        }
+        else if(ft_strncmp(argv[j], "2147483647", 10) > 0)
+            return (1);
+    }
+    return (0);
+}
+
 int argv_checker(int argc, char **argv)
 {
     if(argc <= 2)
@@ -62,7 +89,7 @@ int argv_checker(int argc, char **argv)
         return (0);
     if(check_duplicate(argc, argv))
         return (0);
-    // if(check_min_or_max(argc, argv))
-    //     return (0);
+    if(check_min_or_max(argc, argv))
+        return (0);
     return (1);
 }

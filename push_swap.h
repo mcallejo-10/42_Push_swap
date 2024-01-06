@@ -6,24 +6,38 @@
 /*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/06 22:42:12 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/07 00:33:34 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP 
 #define PUSH_SWAP
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <stdlib.h>
 
+typedef struct s_ring
+{
+    int             value;
+    int             index;
+    struct s_ring   *next;
+}   t_ring;
+
+typedef struct s_stack
+{
+    int             len;           
+}   t_stack;
 
 // PUSH_SWAP //
+int main(int argc, char **argv);
 
 // PUSH_SWAP_ARGV_CHECKER //
 int argv_checker(int argc, char **argv);
 int check_is_int(int argc, char **argv);
 int check_duplicate(int argc, char **argv);
+int check_min_or_max(int argc, char **argv);
 
 
 // UTILS_PUSH_SWAP //
