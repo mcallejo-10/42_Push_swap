@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_push_swap.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:12:44 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/07 00:43:06 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/07 19:54:51 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlen(const char *str)
 	i = 0;
 	while (str[i])
 		i++;
-    return (i);
+	return (i);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
