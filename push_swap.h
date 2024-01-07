@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/07 19:53:36 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/07 21:04:19 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ typedef struct s_ring
 typedef struct s_stack
 {
     int             large;
-    int             *first;
-    char            *nombre;
+    t_ring          *first;
+    char            *name;
 }   t_stack;
 
 // PUSH_SWAP //

@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/07 20:35:32 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/01/07 21:04:15 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@ int	create_ring(t_stack a, int argc, char **argv)
 	t_ring	*temp;
 	t_ring	*new;
 
-	j = 0;
+	j = argc;
 	temp = malloc(sizeof(t_ring) * 1);
 	temp->value = ft_atoi(argv[j]);
 	temp->next = NULL;
-	a.first = temp;
-	j++;
+	j--;
 	while (j < argc)
 	{
-		new = malloc(sizeof(t_ring) * 1);
-		new->value = ft_atoi(argv[j]);
+		temp = malloc(sizeof(t_ring) * 1);
+		temp->value = ft_atoi(argv[j]);
 		temp->next = new;
 		new->next = NULL;
-		j++;
+		j--;
 	}
 	//printf("%i\n", value);
+	a.first = temp;
 	
 	return (0);
 }
