@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_push_swap.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:12:44 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/01/07 19:54:51 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/07 16:21:03 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
