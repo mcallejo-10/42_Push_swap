@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/07 16:44:18 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:50:37 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ typedef struct s_stack
 
 // PUSH_SWAP //
 int		main(int argc, char **argv);
-int		create_ring(t_stack a, int argc, char **argv);
+int		create_ring(t_stack *a, int argc, char **argv);
+void	assign_index(t_stack *a, t_ring *node);
+void	print_stack(t_stack *a);
 
 // PUSH_SWAP_ARGV_CHECKER //
 int		argv_checker(int argc, char **argv);
