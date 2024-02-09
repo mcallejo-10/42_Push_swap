@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_argv_chacker.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:16:14 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/08 13:45:45 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/09 20:24:50 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int	check_is_int(int argc, char **argv)
 	while (j < argc)
 	{
 		i = 0;
+		if (argv[j][0] == '-')
+			i++;
 		while (argv[j][i])
 		{
-			if (argv[j][0] == '-')
-				i++;
-			if (argv[j][i] < '0' && argv[j][i] > '9')
+			if (argv[j][i] < '0' || argv[j][i] > '9')
 				return (1);
 			i++;
 		}
 		j++;
 	}
-	return(0);
+	return (0);
 }
 
 int	check_duplicate(int argc, char **argv)

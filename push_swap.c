@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/08 16:05:58 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/09 20:30:59 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int	create_ring(t_stack *a, int argc, char **argv)
 		}
 		else
 			temp->next = new;
-	new->next = NULL;
-	temp = new;
-	j++;
+		new->next = NULL;
+		temp = new;
+		j++;
 	}
 	return (0);
 }
@@ -49,23 +49,24 @@ void	assign_index(t_stack *a, t_ring *node)
 
 	first = node;
 	while (node)
+	{
+		idx = 0;
+		temp = first;
+		while (temp)
 		{
-			idx = 0;
-			temp = first;
-			while (temp)
-			{
-				if (temp->value < node->value)
-					idx++;
-				temp = temp->next;
-			}
-			node->index = idx;
-			node = node->next;
+			if (temp->value < node->value)
+				idx++;
+			temp = temp->next;
 		}
+		node->index = idx;
+		node = node->next;
+	}
 }
-void print_stack(t_stack *a)
+
+void	print_stack(t_stack *a)
 {
 	t_ring		*temp;
-	
+
 	temp = a->first;
 	printf("Stack list\n");
 	while (temp)
@@ -92,6 +93,10 @@ int	main(int argc, char **argv)
 	write(1, "Argv correct, seguim!\n", 22);
 	create_ring(&a, argc, argv);
 	assign_index(&a, a.first);
+	print_stack(&a);
+	rotate_a(&a);
+	print_stack(&a);
+	rotate_a(&a);
 	print_stack(&a);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/08 15:50:37 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/09 20:31:04 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,9 @@ int		check_min_or_max(int argc, char **argv);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
+
+// INSTRUCTIONS //
+void	rev_rotate_a(t_stack *a);
+void	rotate_a(t_stack *a);
 
 #endif 
