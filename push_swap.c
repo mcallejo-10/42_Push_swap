@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/09 20:30:59 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/10 18:59:33 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,13 @@ int	main(int argc, char **argv)
 	write(1, "Argv correct, seguim!\n", 22);
 	create_ring(&a, argc, argv);
 	assign_index(&a, a.first);
+	if (a_is_sorted(&a))
+		return (0);
+	list_len(&a);
+	printf("a len: %d\n", a.large);
+	list_len(&b);
+	printf("b len: %d\n", b.large);
+	printf("NO está ordenado, seguimos\n");
 	print_stack(&a);
 	rotate_a(&a);
 	print_stack(&a);

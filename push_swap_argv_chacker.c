@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:16:14 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/09 20:24:50 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/10 18:03:08 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,21 @@ int	argv_checker(int argc, char **argv)
 		return (0);
 	if (check_min_or_max(argc, argv))
 		return (0);
+	return (1);
+}
+
+int	a_is_sorted(t_stack *a)
+{
+	t_ring	*temp;
+
+	temp = a->first;
+	while (temp->next)
+	{
+		if (temp->index > temp->next->index)
+			return (0);
+		temp = temp->next;
+	}
+	free(temp);
+	printf("ya está ordenado\n");
 	return (1);
 }

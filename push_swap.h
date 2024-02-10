@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/09 20:31:04 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/10 18:51:13 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,15 @@ int		argv_checker(int argc, char **argv);
 int		check_is_int(int argc, char **argv);
 int		check_duplicate(int argc, char **argv);
 int		check_min_or_max(int argc, char **argv);
+int		a_is_sorted(t_stack *a);
 
 // UTILS_PUSH_SWAP //
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
+
+// 	UTILS_LISTS //
+int		list_len(t_stack *stack);
 
 // INSTRUCTIONS //
 void	rev_rotate_a(t_stack *a);
