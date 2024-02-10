@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/10 18:51:13 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/10 19:49:53 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ int		list_len(t_stack *stack);
 // INSTRUCTIONS //
 void	rev_rotate_a(t_stack *a);
 void	rotate_a(t_stack *a);
+void	swap_a(t_stack *a);
+void	push_b(t_stack *a, t_stack *b);
 
 #endif 

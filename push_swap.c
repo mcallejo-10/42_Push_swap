@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/10 18:59:33 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/10 19:52:02 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,12 @@ int	main(int argc, char **argv)
 	print_stack(&a);
 	rotate_a(&a);
 	print_stack(&a);
-	rotate_a(&a);
+	rev_rotate_a(&a);
 	print_stack(&a);
+	swap_a(&a);
+	print_stack(&a);
+	push_b(&a, &b);
+	print_stack(&a);
+	print_stack(&b);
 	return (0);
 }
