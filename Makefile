@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+         #
+#    By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 13:19:10 by mcallejo          #+#    #+#              #
-#    Updated: 2024/02/11 13:42:51 by mcallejo         ###   ########.fr        #
+#    Updated: 2024/02/12 13:40:30 by mcallejo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ YELLOW=\033[1;93m
 
 NAME = push_swap
 
-SOURCES = main.c push_swap_argv_checker.c utils_lists.c utils_push_swap.c instructions.c
+SOURCES = main.c push_swap_argv_checker.c utils_lists.c utils_push_swap.c \
+	instructions.c radix_sort.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 

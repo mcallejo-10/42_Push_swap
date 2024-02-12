@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:16:14 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/12 13:31:19 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/12 20:28:15 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int	a_is_sorted(t_stack *a)
 			return (0);
 		temp = temp->next;
 	}
-	free(temp);
+	//free(temp);
 	printf("ya está ordenado\n");
 	return (1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/11 13:17:34 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/12 14:00:52 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,11 @@ int		list_len(t_stack *stack);
 // INSTRUCTIONS //
 void	rev_rotate_a(t_stack *a);
 void	rotate_a(t_stack *a);
-void	swap_a(t_stack *a);
+void	swap_stack(t_stack *stack);
 void	push_b(t_stack *a, t_stack *b);
+
+// RADIX_SORT //
+
+
 
 #endif 

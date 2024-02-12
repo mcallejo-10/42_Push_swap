@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/11 13:17:46 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/12 19:53:31 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	main(int argc, char **argv)
 	print_stack(&a);
 	rev_rotate_a(&a);
 	print_stack(&a);
-	swap_a(&a);
+	swap_stack(&a);
 	print_stack(&a);
 	push_b(&a, &b);
 	print_stack(&a);

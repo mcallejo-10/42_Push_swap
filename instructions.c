@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 13:30:51 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/10 19:49:30 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:47:46 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,17 @@ void	rotate_a(t_stack *a)
 	temp->next = NULL;
 }
 
-void	swap_a(t_stack *a)
+void	swap_stack(t_stack *stack)
 {
 	t_ring	*temp;
 	t_ring	*swap;
 
-	temp = a->first;
-	swap = a->first;
+	temp = stack->first;
+	swap = stack->first;
 	temp = temp->next;
 	swap->next = temp->next;
 	temp->next = swap;
-	a->first = temp;
+	stack->first = temp;
 }
 
 void	push_b(t_stack *a, t_stack *b)
