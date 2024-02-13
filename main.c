@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/12 19:53:31 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 13:47:19 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,6 @@ void	assign_index(t_stack *a, t_ring *node)
 	}
 }
 
-void	print_stack(t_stack *a)
-{
-	t_ring		*temp;
-
-	temp = a->first;
-	printf("Stack list\n");
-	while (temp)
-	{
-		printf("value: %d\tindex: %d\n", temp->value, temp->index);
-		temp = temp->next;
-	}
-}
-
 int	main(int argc, char **argv)
 {
 	t_stack		a;
@@ -101,14 +88,6 @@ int	main(int argc, char **argv)
 	printf("b len: %d\n", b.large);
 	printf("NO está ordenado, seguimos\n");
 	print_stack(&a);
-	rotate_a(&a);
-	print_stack(&a);
-	rev_rotate_a(&a);
-	print_stack(&a);
-	swap_stack(&a);
-	print_stack(&a);
-	push_b(&a, &b);
-	print_stack(&a);
-	print_stack(&b);
+	sort_stack(&a, &b);
 	return (0);
 }

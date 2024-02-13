@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:36:41 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/10 18:58:39 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 13:47:25 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,17 @@ int	list_len(t_stack *stack)
 	}
 	stack->large = i + 1;
 	return (i);
+}
+
+void	print_stack(t_stack *a)
+{
+	t_ring		*temp;
+
+	temp = a->first;
+	printf("Stack list\n");
+	while (temp)
+	{
+		printf("value: %d\tindex: %d\n", temp->value, temp->index);
+		temp = temp->next;
+	}
 }

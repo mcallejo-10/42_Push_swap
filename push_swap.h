@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/12 14:00:52 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 14:41:33 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ typedef struct s_stack
 int		main(int argc, char **argv);
 int		create_ring(t_stack *a, int argc, char **argv);
 void	assign_index(t_stack *a, t_ring *node);
-void	print_stack(t_stack *a);
 
 // PUSH_SWAP_ARGV_CHECKER //
 int		argv_checker(int argc, char **argv);
@@ -52,15 +51,18 @@ int		ft_atoi(const char *str);
 
 // 	UTILS_LISTS //
 int		list_len(t_stack *stack);
+void	print_stack(t_stack *a);
 
 // INSTRUCTIONS //
 void	rev_rotate_a(t_stack *a);
 void	rotate_a(t_stack *a);
-void	swap_stack(t_stack *stack);
-void	push_b(t_stack *a, t_stack *b);
+void	swap(t_stack *stack);
+void	push(t_stack *a, t_stack *b);
 
-// RADIX_SORT //
-
-
+// SORT STACK //
+void	sort_stack(t_stack *a, t_stack *b);
+void	sort_small_stack(t_stack *a, t_stack *b);
+void	sort_max3_stack(t_stack *a);
+//void	sort_big_stack(t_stack *a, t_stack *b);
 
 #endif 

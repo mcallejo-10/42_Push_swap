@@ -6,7 +6,7 @@
 #    By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 13:19:10 by mcallejo          #+#    #+#              #
-#    Updated: 2024/02/12 13:40:30 by mcallejo         ###   ########.fr        #
+#    Updated: 2024/02/13 14:01:21 by mcallejo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ YELLOW=\033[1;93m
 NAME = push_swap
 
 SOURCES = main.c push_swap_argv_checker.c utils_lists.c utils_push_swap.c \
-	instructions.c radix_sort.c
+	instructions.c sort_stack.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
-CC = gcc #-fsanitize=address
-CFLAGS = -Wall #-Werror -Wextra
+CC = gcc -g #-fsanitize=address
+CFLAGS = #-Wall #-Werror -Wextra
 
 %.o: %.c Makefile
 	@$(CC) $(CFLAGS) -c -o $@ $<
@@ -32,8 +32,8 @@ CFLAGS = -Wall #-Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) 
-	@$(CC) $(OBJECTS) $(CFLAGS) -o $(NAME)
+$(NAME): $(OBJECTS) Makefile
+	@$(CC) $(SOURCES) $(CFLAGS) -o $(NAME)
 	@echo "$(GREEN)PUSH_SWAP DONE$(END)"
 	
 clean:

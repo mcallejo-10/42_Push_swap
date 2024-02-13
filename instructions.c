@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 13:30:51 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/12 13:47:46 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 14:29:08 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	rev_rotate_a(t_stack *a)
 	last->next = NULL;
 	temp->next = a->first;
 	a->first = temp;
+	write(1, "rra\n", 5);
 }
 
 void	rotate_a(t_stack *a)
@@ -47,9 +48,10 @@ void	rotate_a(t_stack *a)
 	a->first = temp->next;
 	last->next = temp;
 	temp->next = NULL;
+	write(1, "ra\n", 4);
 }
 
-void	swap_stack(t_stack *stack)
+void	swap(t_stack *stack)
 {
 	t_ring	*temp;
 	t_ring	*swap;
@@ -60,17 +62,18 @@ void	swap_stack(t_stack *stack)
 	swap->next = temp->next;
 	temp->next = swap;
 	stack->first = temp;
+	write(1, "sa\n", 4);
 }
 
-void	push_b(t_stack *a, t_stack *b)
+void	push(t_stack *from, t_stack *to)
 {
 	t_ring	*temp;
 
-	temp = a->first;
-	a->first = temp->next;
-	if (b->first == NULL)
+	temp = from->first;
+	from->first = temp->next;
+	if (to->first == NULL)
 		temp->next = NULL;
 	else
-		temp->next = NULL;
-	b->first = temp;
+		temp->next = to->first;
+	to->first = temp;
 }
