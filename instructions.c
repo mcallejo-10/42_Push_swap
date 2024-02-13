@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 13:30:51 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 14:29:08 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:21:32 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,15 +65,34 @@ void	swap(t_stack *stack)
 	write(1, "sa\n", 4);
 }
 
-void	push(t_stack *from, t_stack *to)
+void	push_b(t_stack *a, t_stack *b)
 {
 	t_ring	*temp;
 
-	temp = from->first;
-	from->first = temp->next;
-	if (to->first == NULL)
+	temp = a->first;
+	a->first = temp->next;
+	if (b->first == NULL)
 		temp->next = NULL;
 	else
-		temp->next = to->first;
-	to->first = temp;
+		temp->next = b->first;
+	b->first = temp;
+	b->large++;
+	a->large--;
+	write(1, "pb\n", 4);
+}
+
+void	push_a(t_stack *b, t_stack *a)
+{
+	t_ring	*temp;
+
+	temp = b->first;
+	b->first = temp->next;
+	if (a->first == NULL)
+		temp->next = NULL;
+	else
+		temp->next = a->first;
+	a->first = temp;
+	a->large++;
+	b->large--;
+	write(1, "pa\n", 4);
 }

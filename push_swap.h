@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 14:41:33 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 18:18:44 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,14 @@ int		ft_atoi(const char *str);
 // 	UTILS_LISTS //
 int		list_len(t_stack *stack);
 void	print_stack(t_stack *a);
+t_ring	*ps_lstlast(t_ring *last);
 
 // INSTRUCTIONS //
 void	rev_rotate_a(t_stack *a);
 void	rotate_a(t_stack *a);
 void	swap(t_stack *stack);
-void	push(t_stack *a, t_stack *b);
+void	push_a(t_stack *a, t_stack *b);
+void	push_b(t_stack *b, t_stack *a);
 
 // SORT STACK //
 void	sort_stack(t_stack *a, t_stack *b);

@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:36:41 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 13:47:25 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:37:49 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,13 @@ void	print_stack(t_stack *a)
 		printf("value: %d\tindex: %d\n", temp->value, temp->index);
 		temp = temp->next;
 	}
+}
+
+t_ring	*ps_lstlast(t_ring *last)
+{
+	if (!last)
+		return (0);
+	while (last)
+		last = last->next;
+	return (last);
 }
