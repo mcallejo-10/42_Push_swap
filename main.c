@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 13:47:19 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:10:26 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,7 @@ int	main(int argc, char **argv)
 	if (a_is_sorted(&a))
 		return (0);
 	list_len(&a);
-	printf("a len: %d\n", a.large);
 	list_len(&b);
-	printf("b len: %d\n", b.large);
 	printf("NO está ordenado, seguimos\n");
 	print_stack(&a);
 	sort_stack(&a, &b);

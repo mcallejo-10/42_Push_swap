@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:22:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 19:43:18 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/14 13:37:38 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,14 @@ void	push_a(t_stack *a, t_stack *b);
 void	push_b(t_stack *b, t_stack *a);
 
 // SORT STACK //
+void	put_on_top(t_stack *a, int n);
 void	sort_stack(t_stack *a, t_stack *b);
 void	sort_small_stack(t_stack *a, t_stack *b);
 void	sort_max3_stack(t_stack *a);
 void	sort_3_stack(t_stack *a);
-//void	sort_big_stack(t_stack *a, t_stack *b);
+
+// RADIX SORT //
+void	radix_sort(t_stack *a, t_stack *b);
+int		count_max_bit(t_stack *a);
 
 #endif 

@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:58:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 19:55:37 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:57:36 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,26 @@
 // {
 
 // }
+
+void	put_on_top(t_stack *a, int n)
+{
+	int		i;
+	t_ring	*temp;
+
+	temp = a->first;
+	while (a->first->index != n)
+	{
+		while (temp->index != n)
+		{
+			temp = temp->next;
+			i++;
+		}
+		if (i >= a->large / 2)
+			rotate_a(a);
+		else
+			rev_rotate_a(a);
+	}
+}
 
 void	sort_max3_stack(t_stack *a)
 {
@@ -62,23 +82,15 @@ void	sort_3_stack(t_stack *a)
 void	sort_small_stack(t_stack *a, t_stack *b)
 {
 	t_ring	*temp;
-	
-	while (a->large > 4)
+
+	put_on_top(a, 0);
+	push_b(a, b);
+	if (a->large == 4)
 	{
-		if (a->first->index == 0)
-			push_b(a, b);
-		else
-			rotate_a(a);
-	}
-	while (a->large > 3)
-	{
-		if (a->first->index == 1)
-			push_b(a, b);
-		else
-			rotate_a(a);
+		put_on_top(a, 1);
+		push_b(a, b);
 	}
 	sort_3_stack(a);
-	
 	push_a(b, a);
 	push_a(b, a);
 }
@@ -92,5 +104,8 @@ void	sort_stack(t_stack *a, t_stack *b)
 		sort_max3_stack(a);
 	else if (list_len(a) == 4 || list_len(a) == 5)
 		sort_small_stack(a, b);
-	print_stack(a);
+	else if (list_len(a) > 5)
+		radix_sort(a, b);
+	//printf("Stack al acabar\n");
+	//print_stack(a);
 }

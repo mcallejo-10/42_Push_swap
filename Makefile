@@ -6,7 +6,7 @@
 #    By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 13:19:10 by mcallejo          #+#    #+#              #
-#    Updated: 2024/02/13 14:01:21 by mcallejo         ###   ########.fr        #
+#    Updated: 2024/02/14 13:38:52 by mcallejo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ YELLOW=\033[1;93m
 NAME = push_swap
 
 SOURCES = main.c push_swap_argv_checker.c utils_lists.c utils_push_swap.c \
-	instructions.c sort_stack.c
+	instructions.c sort_stack.c radix_sort.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
