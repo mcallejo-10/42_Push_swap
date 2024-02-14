@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:36:41 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/13 16:37:49 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/14 18:36:18 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	print_stack(t_stack *a)
 	t_ring		*temp;
 
 	temp = a->first;
-	printf("Stack list\n");
 	while (temp)
 	{
 		printf("value: %d\tindex: %d\n", temp->value, temp->index);
