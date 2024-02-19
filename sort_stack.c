@@ -3,25 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:58:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/14 14:57:36 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/17 19:37:50 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// void	sort_big_stack(t_stack *a, t_stack *b)
-// {
-
-// }
 
 void	put_on_top(t_stack *a, int n)
 {
 	int		i;
 	t_ring	*temp;
 
+	i = 0;
 	temp = a->first;
 	while (a->first->index != n)
 	{
@@ -45,20 +41,11 @@ void	sort_max3_stack(t_stack *a)
 	if (list_len(a) <= 3)
 	{
 		if (a->first->index == 2)
-		{
 			rotate_a(a);
-			print_stack(a);
-		}
 		else if (temp->next->index == 2)
-		{
 			rev_rotate_a(a);
-			print_stack(a);
-		}
 		if (a->first->index != 0)
-		{
 			swap(a);
-			print_stack(a);
-		}
 	}
 }
 
@@ -81,8 +68,6 @@ void	sort_3_stack(t_stack *a)
 
 void	sort_small_stack(t_stack *a, t_stack *b)
 {
-	t_ring	*temp;
-
 	put_on_top(a, 0);
 	push_b(a, b);
 	if (a->large == 4)
@@ -92,20 +77,16 @@ void	sort_small_stack(t_stack *a, t_stack *b)
 	}
 	sort_3_stack(a);
 	push_a(b, a);
+	//////////////////////aqui error
 	push_a(b, a);
 }
 
 void	sort_stack(t_stack *a, t_stack *b)
 {
-	t_ring	*temp;
-
-	temp = a->first;
 	if (list_len(a) <= 3)
 		sort_max3_stack(a);
 	else if (list_len(a) == 4 || list_len(a) == 5)
 		sort_small_stack(a, b);
 	else if (list_len(a) > 5)
 		radix_sort(a, b);
-	//printf("Stack al acabar\n");
-	//print_stack(a);
 }

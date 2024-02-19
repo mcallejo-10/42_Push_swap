@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_lists.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:36:41 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/14 18:36:18 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/17 16:39:13 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	print_stack(t_stack *a)
 	temp = a->first;
 	while (temp)
 	{
-		printf("value: %d\tindex: %d\n", temp->value, temp->index);
+		printf("\nvalue: %d\tindex: %d\n", temp->value, temp->index);
 		temp = temp->next;
 	}
 }
@@ -49,4 +49,18 @@ t_ring	*ps_lstlast(t_ring *last)
 	while (last)
 		last = last->next;
 	return (last);
+}
+void free_list(t_stack *stack)
+{
+	t_ring		*temp;
+	t_ring		*head;
+
+	head = stack->first;
+	while (head)
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+	}
+	//free(stack);
 }

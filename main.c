@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/14 18:30:44 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/17 16:44:44 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	create_ring(t_stack *a, int argc, char **argv)
 	return (0);
 }
 
-void	assign_index(t_stack *a, t_ring *node)
+void	assign_index(t_ring *node)
 {
 	t_ring	*first;
 	t_ring	*temp;
@@ -77,15 +77,14 @@ int	main(int argc, char **argv)
 		write(1, "Error\n", 6);
 		return (0);
 	}
-	write(1, "Argv correct, seguim!\n", 22);
 	create_ring(&a, argc, argv);
-	assign_index(&a, a.first);
+	assign_index(a.first);
 	if (a_is_sorted(&a))
 		return (0);
 	list_len(&a);
 	list_len(&b);
-	printf("NO está ordenado, seguimos\n");
-	print_stack(&a);
 	sort_stack(&a, &b);
+	print_stack(&a);
+	free_list(&a);
 	return (0);
 }
