@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+         #
+#    By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 13:19:10 by mcallejo          #+#    #+#              #
-#    Updated: 2024/02/17 16:49:00 by mcallejo         ###   ########.fr        #
+#    Updated: 2024/02/19 11:22:12 by mcallejo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SOURCES = main.c push_swap_argv_checker.c utils_lists.c utils_push_swap.c \
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
-CC = gcc -g #-fsanitize=address
+CC = gcc 
 CFLAGS = -Wall -Werror -Wextra
 
 %.o: %.c Makefile

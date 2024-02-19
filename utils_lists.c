@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_lists.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 18:36:41 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/17 16:39:13 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:20:32 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ t_ring	*ps_lstlast(t_ring *last)
 		last = last->next;
 	return (last);
 }
-void free_list(t_stack *stack)
+
+void	free_list(t_stack *stack)
 {
 	t_ring		*temp;
 	t_ring		*head;
@@ -62,5 +63,4 @@ void free_list(t_stack *stack)
 		head = head->next;
 		free(temp);
 	}
-	//free(stack);
 }

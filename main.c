@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:02:58 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/17 16:44:44 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:49:24 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	main(int argc, char **argv)
 	list_len(&a);
 	list_len(&b);
 	sort_stack(&a, &b);
-	print_stack(&a);
+	//print_stack(&a);
 	free_list(&a);
 	return (0);
 }

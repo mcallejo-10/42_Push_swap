@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:22:24 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/17 16:36:33 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:21:00 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	radix_sort(t_stack *a, t_stack *b)
 	list_len(a);
 	bit = 0;
 	while (bit <= bit_max)
-	{	i = a->large;
+	{
+		i = a->large;
 		while (i > 0)
 		{
 			if (((a->first->index >> bit) & 1) == 0)

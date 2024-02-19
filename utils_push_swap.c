@@ -6,7 +6,7 @@
 /*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:12:44 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/07 16:21:03 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:21:24 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,3 @@ int	ft_atoi(const char *str)
 	}
 	return (num * mul);
 }
-
-

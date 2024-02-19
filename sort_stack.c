@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcallejo <mcallejo@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: mcallejo <mcallejo@student.42barcelona>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:58:21 by mcallejo          #+#    #+#             */
-/*   Updated: 2024/02/17 19:37:50 by mcallejo         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:20:01 by mcallejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,19 @@ void	put_on_top(t_stack *a, int n)
 
 	i = 0;
 	temp = a->first;
-	while (a->first->index != n)
+	while (temp->index != n)
 	{
-		while (temp->index != n)
-		{
-			temp = temp->next;
-			i++;
-		}
-		if (i >= a->large / 2)
+		temp = temp->next;
+		i++;
+	}
+	if (i < a->large / 2)
+	{
+		while (a->first->index != n)
 			rotate_a(a);
-		else
+	}
+	else
+	{
+		while (a->first->index != n)
 			rev_rotate_a(a);
 	}
 }
@@ -76,17 +79,16 @@ void	sort_small_stack(t_stack *a, t_stack *b)
 		push_b(a, b);
 	}
 	sort_3_stack(a);
-	push_a(b, a);
-	//////////////////////aqui error
-	push_a(b, a);
+	while (b->first)
+		push_a(b, a);
 }
 
 void	sort_stack(t_stack *a, t_stack *b)
 {
-	if (list_len(a) <= 3)
+	if (a->large <= 3)
 		sort_max3_stack(a);
-	else if (list_len(a) == 4 || list_len(a) == 5)
+	else if (a->large == 4 || a->large == 5)
 		sort_small_stack(a, b);
-	else if (list_len(a) > 5)
+	else if (a->large > 5)
 		radix_sort(a, b);
 }
