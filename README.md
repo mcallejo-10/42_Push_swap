@@ -1,0 +1,3 @@
+Este proyecto te hará ordenar datos en un stack, con un conjunto limitado de instrucciones, y utilizando el menor número posible de acciones. Para tener éxito, deberás probar a utilizar varios tipos de algoritmos y elegir la solución más apropiada (de entre muchas posibles) para conseguir la ordenación optimizada de los datos.
+
+This project will have you sort data in a stack, with a limited set of instructions, and using the fewest possible number of actions. To be successful, you will have to try using various types of algorithms and choose the most appropriate solution (among many possible ones) to achieve optimized data ordering.
